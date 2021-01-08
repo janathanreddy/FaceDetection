@@ -10,11 +10,12 @@
 		213A7F7025A8AA680006F2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A7F6F25A8AA680006F2A6 /* AppDelegate.swift */; };
 		213A7F7225A8AA680006F2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A7F7125A8AA680006F2A6 /* SceneDelegate.swift */; };
 		213A7F7425A8AA680006F2A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A7F7325A8AA680006F2A6 /* ViewController.swift */; };
-		213A7F7725A8AA680006F2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213A7F7525A8AA680006F2A6 /* Main.storyboard */; };
 		213A7F7925A8AA6E0006F2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 213A7F7825A8AA6E0006F2A6 /* Assets.xcassets */; };
 		213A7F7C25A8AA6E0006F2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213A7F7A25A8AA6E0006F2A6 /* LaunchScreen.storyboard */; };
 		213A7F8725A8AA6F0006F2A6 /* FaceDetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A7F8625A8AA6F0006F2A6 /* FaceDetectionTests.swift */; };
 		213A7F9225A8AA6F0006F2A6 /* FaceDetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A7F9125A8AA6F0006F2A6 /* FaceDetectionUITests.swift */; };
+		213A7FA325A8AD440006F2A6 /* DetectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A7FA225A8AD440006F2A6 /* DetectViewController.swift */; };
+		213A7FAB25A8BDAD0006F2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 213A7FAA25A8BDAC0006F2A6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 		213A7F6F25A8AA680006F2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		213A7F7125A8AA680006F2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		213A7F7325A8AA680006F2A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		213A7F7625A8AA680006F2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		213A7F7825A8AA6E0006F2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		213A7F7B25A8AA6E0006F2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		213A7F7D25A8AA6E0006F2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		213A7F8D25A8AA6F0006F2A6 /* FaceDetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDetectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		213A7F9125A8AA6F0006F2A6 /* FaceDetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectionUITests.swift; sourceTree = "<group>"; };
 		213A7F9325A8AA6F0006F2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		213A7FA225A8AD440006F2A6 /* DetectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectViewController.swift; sourceTree = "<group>"; };
+		213A7FAA25A8BDAC0006F2A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +104,11 @@
 				213A7F6F25A8AA680006F2A6 /* AppDelegate.swift */,
 				213A7F7125A8AA680006F2A6 /* SceneDelegate.swift */,
 				213A7F7325A8AA680006F2A6 /* ViewController.swift */,
-				213A7F7525A8AA680006F2A6 /* Main.storyboard */,
 				213A7F7825A8AA6E0006F2A6 /* Assets.xcassets */,
+				213A7FAA25A8BDAC0006F2A6 /* Main.storyboard */,
 				213A7F7A25A8AA6E0006F2A6 /* LaunchScreen.storyboard */,
 				213A7F7D25A8AA6E0006F2A6 /* Info.plist */,
+				213A7FA225A8AD440006F2A6 /* DetectViewController.swift */,
 			);
 			path = FaceDetection;
 			sourceTree = "<group>";
@@ -231,9 +234,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213A7FAB25A8BDAD0006F2A6 /* Main.storyboard in Resources */,
 				213A7F7C25A8AA6E0006F2A6 /* LaunchScreen.storyboard in Resources */,
 				213A7F7925A8AA6E0006F2A6 /* Assets.xcassets in Resources */,
-				213A7F7725A8AA680006F2A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213A7F7425A8AA680006F2A6 /* ViewController.swift in Sources */,
+				213A7FA325A8AD440006F2A6 /* DetectViewController.swift in Sources */,
 				213A7F7025A8AA680006F2A6 /* AppDelegate.swift in Sources */,
 				213A7F7225A8AA680006F2A6 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +300,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		213A7F7525A8AA680006F2A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				213A7F7625A8AA680006F2A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		213A7F7A25A8AA6E0006F2A6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

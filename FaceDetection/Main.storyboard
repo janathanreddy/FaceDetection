@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-QI-z98">
+                                <rect key="frame" x="-39" y="308.5" width="453" height="30"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <state key="normal" title="Image Galary">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="PhotoAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXQ-Na-qQs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hbI-QI-z98" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qeb-67-I3s"/>
+                            <constraint firstItem="hbI-QI-z98" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="vTc-Qv-YGb"/>
+                            <constraint firstItem="hbI-QI-z98" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yEm-B0-XZn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="617-qs-8sy"/>
+                    <connections>
+                        <outlet property="PhotoBtn" destination="hbI-QI-z98" id="mlv-B8-Oli"/>
+                        <segue destination="pWm-AM-qkh" kind="presentation" identifier="showImageSegue" id="r6e-Nn-H3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Detect View Controller-->
+        <scene sceneID="KvX-Jb-g3a">
+            <objects>
+                <viewController id="pWm-AM-qkh" customClass="DetectViewController" customModule="FaceDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Smc-tq-2xS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C2e-QY-hf4">
+                                <rect key="frame" x="0.0" y="56" width="375" height="591"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKo-ik-H0M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <items>
+                                    <navigationItem title="Image" id="WSt-jO-iO0">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Tyt-p8-4Dl">
+                                            <connections>
+                                                <action selector="dismisss:" destination="pWm-AM-qkh" id="QCc-rj-v9I"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="GpX-mz-o7I"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Proccess" id="OXk-Yd-DV5">
+                                            <connections>
+                                                <action selector="FindAct:" destination="pWm-AM-qkh" id="Ivf-6I-VdP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xed-cp-C4C"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cKo-ik-H0M" firstAttribute="trailing" secondItem="xed-cp-C4C" secondAttribute="trailing" id="1ug-f5-XVv"/>
+                            <constraint firstItem="cKo-ik-H0M" firstAttribute="leading" secondItem="xed-cp-C4C" secondAttribute="leading" id="QQZ-ax-lj8"/>
+                            <constraint firstItem="C2e-QY-hf4" firstAttribute="bottom" secondItem="xed-cp-C4C" secondAttribute="bottom" id="VCC-Hm-KTW"/>
+                            <constraint firstItem="C2e-QY-hf4" firstAttribute="top" secondItem="cKo-ik-H0M" secondAttribute="bottom" id="dVC-ep-Si5"/>
+                            <constraint firstItem="C2e-QY-hf4" firstAttribute="trailing" secondItem="xed-cp-C4C" secondAttribute="trailing" id="j6b-p5-PVM"/>
+                            <constraint firstItem="cKo-ik-H0M" firstAttribute="top" secondItem="xed-cp-C4C" secondAttribute="top" id="z1n-xL-IAP"/>
+                            <constraint firstItem="C2e-QY-hf4" firstAttribute="leading" secondItem="xed-cp-C4C" secondAttribute="leading" id="zMS-YH-xO3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nAA-x2-Tf3"/>
+                    <connections>
+                        <outlet property="ImageView" destination="C2e-QY-hf4" id="5gm-nL-VR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QK0-TH-FWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
